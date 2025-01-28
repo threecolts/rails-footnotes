@@ -3,7 +3,7 @@
 This addresses the following issues:
 
 * Nothing happens when using Puma (or any other threaded server) https://github.com/indirect/rails-footnotes/issues/223
-* Support for frozen strin literals https://github.com/indirect/rails-footnotes/pull/299
+* Support for frozen string literals https://github.com/indirect/rails-footnotes/pull/299
 
 To use this fork, add the following line to your `Gemfile`. We have no plans to release a gem file at this moment.
 
