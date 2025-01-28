@@ -9,13 +9,13 @@ module Footnotes
     # :no_style       => If you don't want the style to be appended to your pages
     # :prefix         => Prefix appended to FootnotesLinks
     # :notes          => Class variable that holds the notes to be processed
-    thread_cattr_accessor :default_limit, default: 25
-    thread_cattr_accessor :font_size, default: '11px'
-    thread_cattr_accessor :lock_top_right, default: false
-    thread_cattr_accessor :multiple_notes, default: false
-    thread_cattr_accessor :no_style, default: false
-    thread_cattr_accessor :prefix, default: 'txmt://open?url=file://%s&amp;line=%d&amp;column=%d'
-    thread_cattr_accessor :notes, default: [
+    cattr_accessor :default_limit, default: 25
+    cattr_accessor :font_size, default: '11px'
+    cattr_accessor :lock_top_right, default: false
+    cattr_accessor :multiple_notes, default: false
+    cattr_accessor :no_style, default: false
+    cattr_accessor :prefix, default: 'txmt://open?url=file://%s&amp;line=%d&amp;column=%d'
+    cattr_accessor :notes, default: [
       :assigns,
       :controller,
       :cookies,

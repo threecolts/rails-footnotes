@@ -1,7 +1,7 @@
 module Footnotes
   module Notes
     class ViewNote < AbstractNote
-      thread_cattr_accessor :template
+      cattr_accessor :template
 
       def self.start!(controller)
         @subscriber ||= ActiveSupport::Notifications.subscribe('render_template.action_view') do |*args|

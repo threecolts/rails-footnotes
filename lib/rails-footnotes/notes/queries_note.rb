@@ -1,10 +1,10 @@
 module Footnotes
   module Notes
     class QueriesNote < AbstractNote
-      thread_cattr_accessor :alert_db_time, default: 16.0, instance_writer: false
-      thread_cattr_accessor :alert_sql_number, default: 8, instance_writer: false
-      thread_cattr_accessor :orm, default: [:active_record, :data_mapper], instance_writer: false
-      thread_cattr_accessor :ignored_regexps, default: [%r{(pg_table|pg_attribute|pg_namespace|show\stables|pragma|sqlite_master)}i], instance_writer: false
+      cattr_accessor :alert_db_time, default: 16.0, instance_writer: false
+      cattr_accessor :alert_sql_number, default: 8, instance_writer: false
+      cattr_accessor :orm, default: [:active_record, :data_mapper], instance_writer: false
+      cattr_accessor :ignored_regexps, default: [%r{(pg_table|pg_attribute|pg_namespace|show\stables|pragma|sqlite_master)}i], instance_writer: false
 
       def self.start!(controller)
         self.query_subscriber.reset!

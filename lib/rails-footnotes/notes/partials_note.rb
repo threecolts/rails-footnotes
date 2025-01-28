@@ -2,7 +2,7 @@ module Footnotes
   module Notes
     class PartialsNote < AbstractNote
 
-      thread_cattr_accessor :partials
+      cattr_accessor :partials
 
       def self.start!(controller)
         self.partials = []

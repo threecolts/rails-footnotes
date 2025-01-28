@@ -4,8 +4,8 @@ module Footnotes
 
       autoload :NoteLogger, 'rails-footnotes/notes/log_note/note_logger'
 
-      thread_cattr_accessor :logs
-      thread_cattr_accessor :original_logger
+      cattr_accessor :logs
+      cattr_accessor :original_logger
 
       def self.start!(controller)
         self.logs = []

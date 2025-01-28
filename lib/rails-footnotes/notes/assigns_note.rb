@@ -3,7 +3,7 @@ require "active_record"
 module Footnotes
   module Notes
     class AssignsNote < AbstractNote
-      thread_cattr_accessor :ignored_assigns, instance_writer: false, default: [
+      cattr_accessor :ignored_assigns, instance_writer: false, default: [
         :@real_format,
         :@before_filter_chain_aborted,
         :@performed_redirect,
@@ -18,7 +18,7 @@ module Footnotes
         :@view_runtime,
         :@marked_for_same_origin_verification
       ]
-      thread_cattr_accessor :ignored_assigns_pattern, instance_writer: false, default: /^@_/
+      cattr_accessor :ignored_assigns_pattern, instance_writer: false, default: /^@_/
 
       def initialize(controller)
         @controller = controller
